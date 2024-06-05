@@ -1,0 +1,65 @@
+
+<!DOCTYPE html> 
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link href="index.css" type="text/css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    </head>
+<body>
+    <div class="container">
+        <div class="c-head">
+            <img src="./img/core.png"/>core down sim [@uwusome]
+        </div>
+        <div class="c-sub">
+            [i] set your stats/raid lvl and click the weapon icons<br>
+            [i] str bonus must be <b>without a weapon equipped</b><br>
+            [i] ctrl+f5 to hard refresh the page for the latest revision
+        </div>
+        <div class="c-inp">
+            str level <input type="text" value="99" class="ired" style="width:24px;" id="istrlvl" oninput="calcmaxes()"/>
+            str bonus <input type="text" value="57" class="ired" style="width:24px;" id="istrbns" oninput="calcmaxes()"/>
+            raid lvl <input type="text" value="300" class="ired" style="width:32px;" id="ilvl" oninput="calccorehp()"/>
+            team size <input type="text" value="1" class="ired" style="width:24px;" id="tsize" oninput="calccorehp()"/>
+            avernic <input type="checkbox" id="avern" checked oninput="calcmaxes()">
+        </div>
+        <div class="c-info"><p id="mhlabel">max hits:</p></div>
+        <div class="c-max">
+            <button type="button" class="b-green"><img src="img/dds.png" onclick="addhit(6)"/></button>
+            <button type="button" class="b-red"><img src="img/dds.png" onclick="addhit(0)"/></button>
+            <button type="button" class="b-green"><img src="img/claws.png" onclick="addhit(7)"/></button>
+            <button type="button" class="b-red"><img src="img/claws.png" onclick="addhit(1)"/></button>
+            <button type="button" class="b-red"><img src="img/tent.png" onclick="addhit(2)"/></button>
+            <button type="button" class="b-red"><img src="img/crapier.png" onclick="addhit(3)"/></button>
+            <button type="button" class="b-red"><img src="img/fang.png" onclick="addhit(4)"/></button>
+            <button type="button" class="b-red"><img src="img/bgs.png" onclick="addhit(5)"/></button>
+            <button type="button" class="b-green"><img src="img/bgs.png" onclick="addhit(11)"/></button>
+            <button type="button" class="b-green"><img src="img/sgs.png" onclick="addhit(8)"/></button>
+            <button type="button" class="b-red"><img src="img/partisan.png" onclick="addhit(9)"/></button>
+            <button type="button" class="b-red"><img src="img/voidwalker.png" onclick="addhit(10)"/></button>
+        </div>
+        <div id="main">
+            <div class="c-core">
+                <div class="hpb">
+                    <div class="hpbi" style="width:40%"></div>
+                    <div class="hpbl">4500/4500[0%]</div>
+                </div>
+                <div class="dmg">500</div>
+                <img src="img/claws.png"/>
+            </div>
+        </div>
+    </div>
+    <script src="cdc.js"></script>
+</body>
+</html>
+<!--
+<div class="c-core">
+    <div class="hpb">
+        <div class="hpbi" style="width:40%"></div>
+        <div class="hpbl">4500/4500[0%]</div>
+    </div>
+    <div class="dmg">500</div>
+    <img src="img/claws.png"/>
+</div>-->

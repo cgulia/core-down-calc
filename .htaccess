@@ -1,0 +1,7 @@
+<FilesMatch "\.html$">
+    Header set Cache-Control "no-cache"
+</FilesMatch>
+
+<FilesMatch "\.js$">
+    Header set Cache-Control "no-cache"
+</FilesMatch>
